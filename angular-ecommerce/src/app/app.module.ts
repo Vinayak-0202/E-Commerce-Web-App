@@ -7,8 +7,13 @@ import { ProductService } from './services/product.service';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductCategoryMenu } from './components/product-category-menu/product-category-menu';
 import { Search } from './components/search/search';
+import { ProductDetails } from './components/product-details/product-details';
 
-const routes: Routes = [
+const routes: Routes = [ 
+  {
+    path: 'product/:id',
+    component: ProductDetails,
+  },
   {
     path: 'search/:keyword',
     component: ProductList,
